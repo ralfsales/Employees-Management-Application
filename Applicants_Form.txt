@@ -1,0 +1,16 @@
+Employee: Bianca Carvalho, Role: SUPERVISOR, Department: DEVELOPMENT
+Employee: Pedro Johnson, Role: MANAGER, Department: DEVELOPMENT
+Employee: Camila Gomes, Role: MANAGER, Department: SALES
+Employee: Ana Souza, Role: MANAGER, Department: SALES
+Employee: Ana Nascimento, Role: TECNICIAN, Department: SALES
+Employee: Ana Ramos, Role: MANAGER, Department: DEVELOPMENTEmployee: Seamus Moreira, Role: TECNICIAN, Department: HR
+Employee: Friedrich Weber, Role: SUPERVISOR, Department: DEVELOPMENT
+Employee: Ava Ramos, Role: MANAGER, Department: SALES
+Employee: Malachy Johnson, Role: MANAGER, Department: HR
+Employee: Sinead Clark, Role: SUPERVISOR, Department: PROJECTS
+Employee: Friedrich Scott, Role: SUPERVISOR, Department: PROJECTS
+Employee: Malachy Green, Role: SUPERVISOR, Department: SALES
+Employee: Padraig Carvalho, Role: MANAGER, Department: HR
+Employee: Nora Schafer, Role: SUPERVISOR, Department: HR
+Employee: Lukas Weber, Role: MANAGER, Department: HR
+Employee: Ricardo Gonsalo, Role: INTERN, Department: PROJECTS
