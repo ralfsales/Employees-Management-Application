@@ -6,8 +6,8 @@ body {
 }
 
 .app {
-  max-width: 760px;
-  margin: 60px auto;
+  max-width: 1000px;
+  margin: 40px auto;
   background: white;
   padding: 32px;
   border-radius: 16px;
@@ -31,23 +31,27 @@ header p {
   margin-bottom: 25px;
 }
 
-.filter-panel {
+.form-section,
+.filter-panel,
+.results {
   background: #f8f9fc;
   padding: 24px;
   border-radius: 12px;
+  margin-bottom: 25px;
 }
 
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+input,
 select {
-  width: 100%;
   padding: 12px;
-  margin-bottom: 14px;
   border: 1px solid #ccc;
   border-radius: 8px;
-}
-
-.buttons {
-  display: flex;
-  gap: 10px;
 }
 
 button {
@@ -57,6 +61,7 @@ button {
   background: #2457d6;
   color: white;
   cursor: pointer;
+  margin-right: 8px;
 }
 
 button:hover {
@@ -65,4 +70,41 @@ button:hover {
 
 .secondary {
   background: #777;
+}
+
+.edit {
+  background: #f59e0b;
+}
+
+.delete {
+  background: #d62828;
+}
+
+.hidden {
+  display: none;
+}
+
+.employee-card {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 16px;
+  background: white;
+  border: 1px solid #ddd;
+  border-left: 5px solid #2457d6;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+@media (max-width: 800px) {
+  .form-grid,
+  .employee-card {
+    grid-template-columns: 1fr;
+  }
 }
