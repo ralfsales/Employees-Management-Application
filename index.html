@@ -10,46 +10,89 @@
   <main class="app">
     <header>
       <h1>Employees Management Application</h1>
-      <p>Internal HR search system for employee records.</p>
+      <p>Sample web demo based on the original Java HR Management project.</p>
     </header>
 
     <section class="notice">
-      <strong>Privacy Notice:</strong>
-      Employee records are not displayed by default. Use filters to search for specific employee information.
+      <strong>Demo Notice:</strong>
+      This page is a simplified sample of the original project. Employee records are hidden by default and only appear after using the search filters.
+    </section>
+
+    <section class="form-section">
+      <h2 id="formTitle">Add New Employee</h2>
+
+      <div class="form-grid">
+        <input id="employeeName" type="text" placeholder="Employee name" />
+
+        <select id="employeeRole">
+          <option value="">Select role</option>
+          <option>Manager</option>
+          <option>Supervisor</option>
+          <option>Technician</option>
+          <option>Developer</option>
+          <option>Analyst</option>
+        </select>
+
+        <select id="employeeDepartment">
+          <option value="">Select department</option>
+          <option>HR</option>
+          <option>Sales</option>
+          <option>Development</option>
+          <option>Projects</option>
+          <option>IT Support</option>
+        </select>
+
+        <select id="employeeLevel">
+          <option value="">Select level</option>
+          <option>Junior</option>
+          <option>Mid-Level</option>
+          <option>Senior</option>
+        </select>
+      </div>
+
+      <button id="saveButton" onclick="saveEmployee()">Add Employee</button>
+      <button class="secondary" onclick="resetForm()">Clear Form</button>
     </section>
 
     <section class="filter-panel">
       <h2>Search Employee Records</h2>
 
-      <select id="departmentFilter">
-        <option value="">Filter by Department</option>
-        <option value="HR">HR</option>
-        <option value="Sales">Sales</option>
-        <option value="Development">Development</option>
-        <option value="Projects">Projects</option>
-        <option value="IT Support">IT Support</option>
-      </select>
+      <div class="form-grid">
+        <input id="searchInput" type="text" placeholder="Search by name..." />
 
-      <select id="roleFilter">
-        <option value="">Filter by Role</option>
-        <option value="Project Manager">Project Manager</option>
-        <option value="HR Analyst">HR Analyst</option>
-        <option value="Software Developer">Software Developer</option>
-        <option value="Sales Supervisor">Sales Supervisor</option>
-        <option value="IT Technician">IT Technician</option>
-      </select>
+        <select id="departmentFilter">
+          <option value="">All departments</option>
+          <option>HR</option>
+          <option>Sales</option>
+          <option>Development</option>
+          <option>Projects</option>
+          <option>IT Support</option>
+        </select>
 
-      <select id="levelFilter">
-        <option value="">Filter by Level</option>
-        <option value="Junior">Junior</option>
-        <option value="Mid-Level">Mid-Level</option>
-        <option value="Senior">Senior</option>
-      </select>
+        <select id="roleFilter">
+          <option value="">All roles</option>
+          <option>Manager</option>
+          <option>Supervisor</option>
+          <option>Technician</option>
+          <option>Developer</option>
+          <option>Analyst</option>
+        </select>
 
-      <div class="buttons">
-        <button onclick="searchEmployees()">Search Records</button>
-        <button class="secondary" onclick="clearFilters()">Clear Filters</button>
+        <select id="levelFilter">
+          <option value="">All levels</option>
+          <option>Junior</option>
+          <option>Mid-Level</option>
+          <option>Senior</option>
+        </select>
       </div>
+
+      <button onclick="searchEmployees()">Search Records</button>
+      <button class="secondary" onclick="clearSearch()">Clear Search</button>
+    </section>
+
+    <section id="resultsSection" class="results hidden">
+      <h2>Search Results</h2>
+      <div id="employeeList"></div>
     </section>
   </main>
 
