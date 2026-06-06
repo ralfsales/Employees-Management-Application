@@ -10,29 +10,19 @@
   <main class="app">
     <header>
       <h1>Employees Management Application</h1>
-      <p>HR dashboard for managing employee records, departments and roles.</p>
+      <p>Internal HR search system for employee records.</p>
     </header>
 
-    <section class="stats">
-      <div>
-        <h3 id="totalEmployees">0</h3>
-        <p>Total Employees</p>
-      </div>
-      <div>
-        <h3 id="totalDepartments">0</h3>
-        <p>Departments</p>
-      </div>
-      <div>
-        <h3 id="totalManagers">0</h3>
-        <p>Managers</p>
-      </div>
+    <section class="notice">
+      <strong>Privacy Notice:</strong>
+      Employee records are not displayed by default. Use filters to search for specific employee information.
     </section>
 
-    <section class="controls">
-      <input id="searchInput" type="text" placeholder="Search by name, role or department..." />
+    <section class="filter-panel">
+      <h2>Search Employee Records</h2>
 
       <select id="departmentFilter">
-        <option value="">All Departments</option>
+        <option value="">Filter by Department</option>
         <option value="HR">HR</option>
         <option value="Sales">Sales</option>
         <option value="Development">Development</option>
@@ -41,55 +31,25 @@
       </select>
 
       <select id="roleFilter">
-        <option value="">All Roles</option>
-        <option value="Manager">Manager</option>
-        <option value="Supervisor">Supervisor</option>
-        <option value="Technician">Technician</option>
-        <option value="Developer">Developer</option>
-        <option value="Analyst">Analyst</option>
+        <option value="">Filter by Role</option>
+        <option value="Project Manager">Project Manager</option>
+        <option value="HR Analyst">HR Analyst</option>
+        <option value="Software Developer">Software Developer</option>
+        <option value="Sales Supervisor">Sales Supervisor</option>
+        <option value="IT Technician">IT Technician</option>
       </select>
 
-      <select id="sortOption">
-        <option value="name">Sort by Name</option>
-        <option value="department">Sort by Department</option>
-        <option value="role">Sort by Role</option>
+      <select id="levelFilter">
+        <option value="">Filter by Level</option>
+        <option value="Junior">Junior</option>
+        <option value="Mid-Level">Mid-Level</option>
+        <option value="Senior">Senior</option>
       </select>
-    </section>
 
-    <section class="form-section">
-      <h2 id="formTitle">Add New Employee</h2>
-
-      <div class="form-grid">
-        <input id="employeeName" type="text" placeholder="Employee name" />
-
-        <select id="employeeRole">
-          <option value="">Select role</option>
-          <option>Manager</option>
-          <option>Supervisor</option>
-          <option>Technician</option>
-          <option>Developer</option>
-          <option>Analyst</option>
-        </select>
-
-        <select id="employeeDepartment">
-          <option value="">Select department</option>
-          <option>HR</option>
-          <option>Sales</option>
-          <option>Development</option>
-          <option>Projects</option>
-          <option>IT Support</option>
-        </select>
-
-        <input id="employeeEmail" type="email" placeholder="Employee email" />
+      <div class="buttons">
+        <button onclick="searchEmployees()">Search Records</button>
+        <button class="secondary" onclick="clearFilters()">Clear Filters</button>
       </div>
-
-      <button id="saveButton" onclick="saveEmployee()">Add Employee</button>
-      <button class="secondary" onclick="resetForm()">Clear</button>
-    </section>
-
-    <section>
-      <h2>Employee Database</h2>
-      <div id="employeeList" class="employee-list"></div>
     </section>
   </main>
 
