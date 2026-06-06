@@ -1,5 +1,5 @@
-HR Manager Program
-The HR Manager program is a comprehensive employee data management system designed to streamline HR operations. Over three weeks, I developed key functionalities such as adding, searching, sorting, editing, and deleting employee records. The project focused on security, efficiency, and scalability to address the unique challenges of handling sensitive employee data.
+## HR Manager Program
+It is a comprehensive employee data management system designed to streamline HR operations. Over three weeks, I developed key functionalities such as adding, searching, sorting, editing, and deleting employee records. The project focused on security, efficiency, and scalability to address the unique challenges of handling sensitive employee data.
 
 Key Features
 Role-Based Access Control (RBAC): Ensures only authorized roles, such as HR managers, have access to sensitive data.
